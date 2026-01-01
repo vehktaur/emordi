@@ -44,7 +44,7 @@ function Home() {
           ))}
         </Swiper>
       </section>
-      <section className="h-dvh items-center relative clamp-[gap,3,4] w-full text-white sm:w-1/2 xl:w-[38%] flex flex-col overflow-hidden justify-center min-h-dvh bg-[url(./img/white_roses.png)] bg-cover">
+      <section className="h-dvh items-center relative clamp-[gap,3,4] w-full text-white sm:w-1/2 xl:w-[38%] flex flex-col overflow-hidden justify-center min-h-dvh bg-[url(/img/white_roses.png)] bg-cover">
         <Heart
           className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse max-w-[113%] clamp-[size,110,145] text-rose-100"
           strokeWidth={0.5}
