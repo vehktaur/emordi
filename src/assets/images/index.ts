@@ -3,7 +3,6 @@ import img2 from './img2.jpeg'
 import img3 from './img3.jpeg'
 import img4 from './img4.jpeg'
 
-
 export default {
   img1,
   img2,

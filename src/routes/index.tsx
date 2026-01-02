@@ -1,9 +1,9 @@
-import images from '@/assets/images'
 import { createFileRoute } from '@tanstack/react-router'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { useEffect, useState } from 'react'
 import { HeartIcon as Heart } from 'lucide-react'
+import images from '@/assets/images'
 
 const { img1, img2, img3, img4 } = images
 const slideImages = [img1, img2, img3, img4]

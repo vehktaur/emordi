@@ -1,7 +1,7 @@
-import type { Hymn, ProgramSection } from '@/types'
 import { Church, Heart, MessageSquare } from 'lucide-react'
+import type { Hymn, ProgramSection } from '@/types'
 
-export const hymns: Hymn[] = [
+export const hymns: Array<Hymn> = [
   {
     number: 131,
     title: '"What God Has Yoked Together"',
@@ -96,7 +96,7 @@ export const hymns: Hymn[] = [
   },
 ]
 
-export const programSections: ProgramSection[] = [
+export const programSections: Array<ProgramSection> = [
   {
     title: 'Officiating Ministers',
     items: [

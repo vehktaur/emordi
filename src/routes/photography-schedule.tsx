@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Camera, ChevronDown, ChevronUp, Check } from 'lucide-react'
+import { Camera, Check, ChevronDown, ChevronUp } from 'lucide-react'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/photography-schedule')({

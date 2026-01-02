@@ -40,7 +40,7 @@ export default function WeddingProgram() {
             {/* Program Timeline */}
             <div className="divide-y divide-rose-100 overflow-x-clip">
               {items.map((item) => {
-                const Icon = item?.icon
+                const Icon = item.icon
                 return (
                   <div
                     key={item.num}

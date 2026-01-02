@@ -1,13 +1,13 @@
 import { PanelLeftIcon } from 'lucide-react'
+import { Link } from '@tanstack/react-router'
+import { useState } from 'react'
 import {
   Sheet,
-  SheetTrigger,
   SheetContent,
   SheetHeader,
   SheetTitle,
+  SheetTrigger,
 } from './ui/sheet'
-import { Link } from '@tanstack/react-router'
-import { useState } from 'react'
 
 const links = [
   { label: 'Welcome', to: '/' },

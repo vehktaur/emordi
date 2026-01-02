@@ -36,16 +36,8 @@ export const Decor = (props: React.SVGProps<SVGSVGElement>) => (
         r="126.507"
         gradientTransform="matrix(1, 0, 0, 1, 2355.08, 607.847)"
       >
-        <stop
-          offset="0"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
-        <stop
-          offset="1"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
+        <stop offset="0" stop-color="currentColor" stop-opacity="1" />
+        <stop offset="1" stop-color="currentColor" stop-opacity="1" />
       </radialGradient>
       <clipPath id="clip-3">
         <path
@@ -75,16 +67,8 @@ export const Decor = (props: React.SVGProps<SVGSVGElement>) => (
         r="157.94"
         gradientTransform="matrix(1, 0, 0, 1, 2028.78, 588.358)"
       >
-        <stop
-          offset="0"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
-        <stop
-          offset="1"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
+        <stop offset="0" stop-color="currentColor" stop-opacity="1" />
+        <stop offset="1" stop-color="currentColor" stop-opacity="1" />
       </radialGradient>
       <clipPath id="clip-6">
         <path
@@ -114,16 +98,8 @@ export const Decor = (props: React.SVGProps<SVGSVGElement>) => (
         r="453.008"
         gradientTransform="matrix(1, 0, 0, 1, 1216.82, 592.946)"
       >
-        <stop
-          offset="0"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
-        <stop
-          offset="1"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
+        <stop offset="0" stop-color="currentColor" stop-opacity="1" />
+        <stop offset="1" stop-color="currentColor" stop-opacity="1" />
       </radialGradient>
       <clipPath id="clip-9">
         <path
@@ -153,16 +129,8 @@ export const Decor = (props: React.SVGProps<SVGSVGElement>) => (
         r="119.082"
         gradientTransform="matrix(1, 0, 0, 1, 1663.43, 633.109)"
       >
-        <stop
-          offset="0"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
-        <stop
-          offset="1"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
+        <stop offset="0" stop-color="currentColor" stop-opacity="1" />
+        <stop offset="1" stop-color="currentColor" stop-opacity="1" />
       </radialGradient>
       <clipPath id="clip-12">
         <path
@@ -192,16 +160,8 @@ export const Decor = (props: React.SVGProps<SVGSVGElement>) => (
         r="83.6306"
         gradientTransform="matrix(1, 0, 0, 1, 2111.38, 667.48)"
       >
-        <stop
-          offset="0"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
-        <stop
-          offset="1"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
+        <stop offset="0" stop-color="currentColor" stop-opacity="1" />
+        <stop offset="1" stop-color="currentColor" stop-opacity="1" />
       </radialGradient>
       <clipPath id="clip-15">
         <path
@@ -231,16 +191,8 @@ export const Decor = (props: React.SVGProps<SVGSVGElement>) => (
         r="126.507"
         gradientTransform="matrix(1, 0, 0, 1, 2644.92, 607.847)"
       >
-        <stop
-          offset="0"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
-        <stop
-          offset="1"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
+        <stop offset="0" stop-color="currentColor" stop-opacity="1" />
+        <stop offset="1" stop-color="currentColor" stop-opacity="1" />
       </radialGradient>
       <clipPath id="clip-18">
         <path
@@ -270,16 +222,8 @@ export const Decor = (props: React.SVGProps<SVGSVGElement>) => (
         r="157.94"
         gradientTransform="matrix(1, 0, 0, 1, 2971.22, 588.358)"
       >
-        <stop
-          offset="0"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
-        <stop
-          offset="1"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
+        <stop offset="0" stop-color="currentColor" stop-opacity="1" />
+        <stop offset="1" stop-color="currentColor" stop-opacity="1" />
       </radialGradient>
       <clipPath id="clip-21">
         <path
@@ -309,16 +253,8 @@ export const Decor = (props: React.SVGProps<SVGSVGElement>) => (
         r="453.008"
         gradientTransform="matrix(1, 0, 0, 1, 3783.18, 592.946)"
       >
-        <stop
-          offset="0"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
-        <stop
-          offset="1"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
+        <stop offset="0" stop-color="currentColor" stop-opacity="1" />
+        <stop offset="1" stop-color="currentColor" stop-opacity="1" />
       </radialGradient>
       <clipPath id="clip-24">
         <path
@@ -348,16 +284,8 @@ export const Decor = (props: React.SVGProps<SVGSVGElement>) => (
         r="119.082"
         gradientTransform="matrix(1, 0, 0, 1, 3336.57, 633.109)"
       >
-        <stop
-          offset="0"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
-        <stop
-          offset="1"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
+        <stop offset="0" stop-color="currentColor" stop-opacity="1" />
+        <stop offset="1" stop-color="currentColor" stop-opacity="1" />
       </radialGradient>
       <clipPath id="clip-27">
         <path
@@ -387,16 +315,8 @@ export const Decor = (props: React.SVGProps<SVGSVGElement>) => (
         r="83.6306"
         gradientTransform="matrix(1, 0, 0, 1, 2888.62, 667.48)"
       >
-        <stop
-          offset="0"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
-        <stop
-          offset="1"
-          stop-color="currentColor"
-          stop-opacity="1"
-        />
+        <stop offset="0" stop-color="currentColor" stop-opacity="1" />
+        <stop offset="1" stop-color="currentColor" stop-opacity="1" />
       </radialGradient>
     </defs>
     <path

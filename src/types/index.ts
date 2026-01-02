@@ -4,14 +4,14 @@ export interface Hymn {
   number: number
   title: string
   scripture: string
-  verses: {
+  verses: Array<{
     number: number
-    lines: string[]
-  }[]
-  chorus?: {
+    lines: Array<string>
+  }>
+  chorus?: Array<{
     number: number
-    lines: string[]
-  }[]
+    lines: Array<string>
+  }>
   showVersesNumbers?: boolean
   seeAlso?: string
 }
@@ -19,9 +19,9 @@ export interface Hymn {
 export interface ProgramSection {
   title: string
   subtitle?: string
-  items: {
+  items: Array<{
     num: number
     title: string
     icon?: typeof Heart
-  }[]
+  }>
 }

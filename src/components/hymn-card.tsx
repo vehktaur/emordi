@@ -1,10 +1,10 @@
 import { Music } from 'lucide-react'
+import type { Hymn } from '@/types'
 import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import type { Hymn } from '@/types'
 
 export function HymnCard({
   hymn: { showVersesNumbers = true, ...hymn },
@@ -51,7 +51,7 @@ export function HymnCard({
               </div>
 
               {/* Chorus */}
-              {hymn?.chorus && hymn.chorus[idx] && (
+              {hymn.chorus && hymn.chorus[idx] && (
                 <div className="bg-rose-100/10 rounded-md p-4 border-l-4 border-rose-300">
                   <p className="font-semibold text-rose-300 mb-2">
                     (CHORUS {hymn.chorus[idx].number})
