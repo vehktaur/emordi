@@ -1,68 +1,11 @@
-import { Heart, MessageSquare, Church } from 'lucide-react'
 import { createFileRoute } from '@tanstack/react-router'
 import { Decor } from '@/assets/svgs'
+import { HymnCard } from '@/components/hymn-card'
+import { hymns, programSections as sections } from '@/data'
 
 export const Route = createFileRoute('/wedding-program')({
   component: WeddingProgram,
 })
-
-interface ProgramSection {
-  title: string
-  subtitle?: string
-  items: {
-    num: number
-    title: string
-    icon?: typeof Heart
-  }[]
-}
-
-const sections: ProgramSection[] = [
-  {
-    title: 'Officiating Ministers',
-    items: [
-      {
-        num: 1,
-        title: 'Bro Isichei',
-      },
-      {
-        num: 2,
-        title: 'Bro Emmanuel Akinkugbe',
-      },
-    ],
-  },
-
-  {
-    title: 'Order of Service',
-    subtitle: 'Join us as we celebrate this special day',
-    items: [
-      {
-        num: 1,
-        title: 'Opening Song (131) and Prayer',
-        icon: Church,
-      },
-      {
-        num: 2,
-        title: 'Wedding Discourse',
-        icon: MessageSquare,
-      },
-      {
-        num: 3,
-        title: 'Exchange of Vows',
-        icon: Heart,
-      },
-      {
-        num: 4,
-        title: 'Announcements',
-        icon: MessageSquare,
-      },
-      {
-        num: 5,
-        title: 'Closing Song (132) and Prayer',
-        icon: Church,
-      },
-    ],
-  },
-]
 
 export default function WeddingProgram() {
   return (
@@ -94,14 +37,13 @@ export default function WeddingProgram() {
             <hr className="border-rose-100 mt-4 mb-2 w-24 mx-auto" />
 
             {/* Program Timeline */}
-
-            <div className="divide-y divide-rose-100 ">
+            <div className="divide-y divide-rose-100 overflow-x-clip">
               {items.map((item) => {
                 const Icon = item?.icon
                 return (
                   <div
                     key={item.num}
-                    className="flex items-center gap-4 py-3 px-4"
+                    className="flex items-center gap-4 clamp-[py,2,3] clamp-[px,1.5,4] hover:translate-x-4 transition-transform duration-300"
                   >
                     <span className="size-8 shrink-0 rounded-full bg-rose-50 flex items-center justify-center font-medium text-rose-800">
                       {item.num}
@@ -122,7 +64,22 @@ export default function WeddingProgram() {
           </article>
         ))}
 
-        <article className="program-section"></article>
+        {/* Hymns Section */}
+        <article className="program-section">
+          <header className="text-center w-fit mx-auto clamp-[px,4,10]">
+            <h1 className="heading">Wedding Hymns</h1>
+            <p>Click to view full lyrics</p>
+          </header>
+
+          <hr className="border-rose-100 mt-4 mb-6 w-24 mx-auto" />
+
+          <div className="space-y-4">
+            {hymns.map((hymn) => (
+              <HymnCard key={hymn.number} hymn={hymn} />
+            ))}
+          </div>
+        </article>
+
       </div>
 
       {/* Footer note */}

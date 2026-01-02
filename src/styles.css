@@ -142,7 +142,7 @@
 
 @layer components {
   .program-section {
-    @apply max-w-3xl border rounded-3xl mx-auto flex flex-col w-full px-4 pt-5 pb-8;
+    @apply max-w-3xl border rounded-3xl mx-auto flex flex-col w-full clamp-[px,2.5,4] pt-5 clamp-[pb,6,8];
 
     .heading {
       @apply clamp-[text,lg,2xl] mb-2 font-semibold;
