@@ -3,6 +3,11 @@
 @plugin "daisyui" {
   themes: false;
 }
+/* prettier-ignore */
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+  preferredStrategy: 'pseudoelements';
+}
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
@@ -125,10 +130,10 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
-    @apply bg-background text-white clamp-[text,sm,base] font-montserrat;
+    @apply bg-background text-white clamp-[text,sm,base] font-montserrat scrollbar-thin overflow-x-clip;
   }
   button {
     @apply cursor-pointer font-montserrat;
@@ -155,11 +160,4 @@
 .swiper-pagination-bullet-active {
   width: 3rem !important;
   border-radius: 0.5rem !important;
-}
-
-.heart-shape {
-  --c: rgba(0, 0, 0, 0.5);
-  aspect-ratio: 1; /* Makes it a square */
-  border-image: radial-gradient(var(--c) 69%, #0000 70%) 84.5%/50%;
-  clip-path: polygon(-41% 0, 50% 91%, 141% 0);
 }

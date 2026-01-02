@@ -7,6 +7,7 @@ import {
   SheetTitle,
 } from './ui/sheet'
 import { Link } from '@tanstack/react-router'
+import { useState } from 'react'
 
 const links = [
   { label: 'Welcome', to: '/' },
@@ -17,9 +18,10 @@ const links = [
 ]
 
 const Header = () => {
+  const [open, setOpen] = useState(false)
   return (
     <header className="px-5 h-20 content-center fixed top-0 inset-x-0 z-50">
-      <Sheet>
+      <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger className="ms-auto block cursor-pointer text-white">
           <PanelLeftIcon className="clamp-[size,5,6]" />
         </SheetTrigger>
@@ -33,7 +35,7 @@ const Header = () => {
           <nav className="mt-12">
             <ul className="flex flex-col gap-4">
               {links.map(({ label, to }) => (
-                <li>
+                <li key={to} onClick={() => setOpen(false)}>
                   <Link
                     to={to}
                     className="font-medium transition-colors block py-2 px-5 hover:bg-white/10 text-center sm:text-start"

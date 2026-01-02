@@ -66,10 +66,10 @@ const sections: ProgramSection[] = [
 
 export default function WeddingProgram() {
   return (
-    <div className="min-h-screen py-12 px-5">
+    <div className="py-12 px-5">
       <div className="fixed inset-0 -z-1">
         <video
-          className="size-full object-cover brightness-30"
+          className="size-full object-cover brightness-40"
           autoPlay
           muted
           loop
