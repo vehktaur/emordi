@@ -20,7 +20,7 @@ const links = [
 const Header = () => {
   const [open, setOpen] = useState(false)
   return (
-    <header className="px-5 h-20 content-center fixed top-0 inset-x-0 z-50">
+    <header className="px-5 h-20 content-center fixed top-0 end-0 z-50">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger className="ms-auto block cursor-pointer text-white">
           <PanelLeftIcon className="clamp-[size,5,6]" />

@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Decor } from '@/assets/svgs'
 import { HymnCard } from '@/components/hymn-card'
 import { hymns, programSections as sections } from '@/data'
+import { Accordion } from '@/components/ui/accordion'
 
 export const Route = createFileRoute('/wedding-program')({
   component: WeddingProgram,
@@ -73,13 +74,12 @@ export default function WeddingProgram() {
 
           <hr className="border-rose-100 mt-4 mb-6 w-24 mx-auto" />
 
-          <div className="space-y-4">
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {hymns.map((hymn) => (
               <HymnCard key={hymn.number} hymn={hymn} />
             ))}
-          </div>
+          </Accordion>
         </article>
-
       </div>
 
       {/* Footer note */}
