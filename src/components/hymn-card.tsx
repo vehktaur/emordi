@@ -1,6 +1,5 @@
 import { Music } from 'lucide-react'
 import {
-  Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
