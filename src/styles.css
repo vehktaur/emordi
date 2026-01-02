@@ -128,10 +128,20 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-montserrat;
+    @apply bg-background text-white clamp-[text,sm,base] font-montserrat;
   }
   button {
     @apply cursor-pointer font-montserrat;
+  }
+}
+
+@layer components {
+  .program-section {
+    @apply max-w-3xl border rounded-3xl mx-auto flex flex-col w-full px-4 pt-5 pb-8;
+
+    .heading {
+      @apply clamp-[text,lg,2xl] mb-2 font-semibold;
+    }
   }
 }
 
@@ -152,13 +162,4 @@
   aspect-ratio: 1; /* Makes it a square */
   border-image: radial-gradient(var(--c) 69%, #0000 70%) 84.5%/50%;
   clip-path: polygon(-41% 0, 50% 91%, 141% 0);
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-white clamp-[text,sm,base] font-montserrat;
-  }
 }

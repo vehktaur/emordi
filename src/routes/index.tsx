@@ -7,10 +7,21 @@ import { HeartIcon as Heart } from 'lucide-react'
 
 const { img1, img2, img3, img4 } = images
 const slideImages = [img1, img2, img3, img4]
+const backgroundImages = [
+  '/img/bg1.png',
+  '/img/bg2.jpg',
+  '/img/bg3.jpg',
+  '/img/bg4.jpg',
+  '/img/bg5.jpg',
+]
 
 const weddingDate = new Date('2026-01-24T10:00:00')
 
 function Home() {
+  const [randomBg] = useState(
+    () => backgroundImages[Math.floor(Math.random() * backgroundImages.length)],
+  )
+
   return (
     <div className="flex items-center flex-col sm:flex-row w-full max-w-dvw dark:bg-white">
       <section className="h-dvh flex flex-col min-w-2xs relative w-full sm:w-1/2 xl:w-[62%] overflow-hidden">
@@ -44,7 +55,13 @@ function Home() {
           ))}
         </Swiper>
       </section>
-      <section className="h-dvh items-center relative clamp-[gap,3,4] w-full text-white sm:w-1/2 xl:w-[38%] flex flex-col overflow-hidden justify-center min-h-dvh bg-[url(/img/white_roses.png)] bg-cover">
+      <section className="h-dvh items-center relative clamp-[gap,3,4] w-full text-white sm:w-1/2 xl:w-[38%] flex flex-col overflow-hidden justify-center min-h-dvh">
+        <div
+          className="absolute inset-0 -z-1  bg-cover brightness-50"
+          style={{
+            backgroundImage: `url(${randomBg})`,
+          }}
+        />
         <Heart
           className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse max-w-[113%] clamp-[size,110,145] text-rose-100"
           strokeWidth={0.5}
@@ -60,6 +77,17 @@ function Home() {
 
         <p className="text-center clamp-[text,lg,xl]"> Benin City </p>
         <CountDown />
+
+        <div className="absolute bottom-4 text-center">
+          <h3 className="font-medium">Wedding Location</h3>
+          <address className="clamp-[text,xs,sm]">
+            Kingdom Hall of Jehovah&apos;s Witness,
+            <br />
+            30 Ogboro Street, Off Oko Central, Airport Road,
+            <br />
+            Benin City, Edo State.
+          </address>
+        </div>
       </section>
     </div>
   )

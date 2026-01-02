@@ -9,18 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WeddingProgramRouteImport } from './routes/wedding-program'
 import { Route as PhotographyScheduleRouteImport } from './routes/photography-schedule'
-import { Route as OrderOfServiceRouteImport } from './routes/order-of-service'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WeddingProgramRoute = WeddingProgramRouteImport.update({
+  id: '/wedding-program',
+  path: '/wedding-program',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PhotographyScheduleRoute = PhotographyScheduleRouteImport.update({
   id: '/photography-schedule',
   path: '/photography-schedule',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OrderOfServiceRoute = OrderOfServiceRouteImport.update({
-  id: '/order-of-service',
-  path: '/order-of-service',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -31,48 +31,48 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/order-of-service': typeof OrderOfServiceRoute
   '/photography-schedule': typeof PhotographyScheduleRoute
+  '/wedding-program': typeof WeddingProgramRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/order-of-service': typeof OrderOfServiceRoute
   '/photography-schedule': typeof PhotographyScheduleRoute
+  '/wedding-program': typeof WeddingProgramRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/order-of-service': typeof OrderOfServiceRoute
   '/photography-schedule': typeof PhotographyScheduleRoute
+  '/wedding-program': typeof WeddingProgramRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/order-of-service' | '/photography-schedule'
+  fullPaths: '/' | '/photography-schedule' | '/wedding-program'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/order-of-service' | '/photography-schedule'
-  id: '__root__' | '/' | '/order-of-service' | '/photography-schedule'
+  to: '/' | '/photography-schedule' | '/wedding-program'
+  id: '__root__' | '/' | '/photography-schedule' | '/wedding-program'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  OrderOfServiceRoute: typeof OrderOfServiceRoute
   PhotographyScheduleRoute: typeof PhotographyScheduleRoute
+  WeddingProgramRoute: typeof WeddingProgramRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/wedding-program': {
+      id: '/wedding-program'
+      path: '/wedding-program'
+      fullPath: '/wedding-program'
+      preLoaderRoute: typeof WeddingProgramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/photography-schedule': {
       id: '/photography-schedule'
       path: '/photography-schedule'
       fullPath: '/photography-schedule'
       preLoaderRoute: typeof PhotographyScheduleRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/order-of-service': {
-      id: '/order-of-service'
-      path: '/order-of-service'
-      fullPath: '/order-of-service'
-      preLoaderRoute: typeof OrderOfServiceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -87,8 +87,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  OrderOfServiceRoute: OrderOfServiceRoute,
   PhotographyScheduleRoute: PhotographyScheduleRoute,
+  WeddingProgramRoute: WeddingProgramRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

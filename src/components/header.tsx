@@ -10,7 +10,7 @@ import { Link } from '@tanstack/react-router'
 
 const links = [
   { label: 'Welcome', to: '/' },
-  { label: 'Order of Service', to: '/order-of-service' },
+  { label: 'Wedding Program', to: '/wedding-program' },
   { label: 'Photography Schedule', to: '/photography-schedule' },
   { label: 'Gallery', to: '/gallery' },
   { label: 'RSVP', to: '/rsvp' },
@@ -21,7 +21,7 @@ const Header = () => {
     <header className="px-5 h-20 content-center fixed top-0 inset-x-0 z-50">
       <Sheet>
         <SheetTrigger className="ms-auto block cursor-pointer text-white">
-          <PanelLeftIcon className="size-6" />
+          <PanelLeftIcon className="clamp-[size,5,6]" />
         </SheetTrigger>
         <SheetContent className="bg-transparent backdrop-blur-md border-rose-200 text-white">
           <SheetHeader className="mt-12">
