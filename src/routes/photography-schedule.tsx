@@ -60,21 +60,8 @@ const photoSections = [
       "Couple with Bride's Friends and Well Wishers",
       "Couple with Groom's Friends and Well Wishers",
       'Couple with Friends from Enwanta/Airport Rd Congregation',
-      'Couple with Worship Harmony Crew',
       'Couple with Uniport Bolides',
-      "Couple with UNIBEN Alumni's",
-      'Couple with Delta State Polytechnic Ozoro/Ogwashi Uku',
-      'Couple with DNL/Kohasa Colleagues',
-      'Couple with B.M.S.S',
-    ],
-  },
-  {
-    title: 'Church Communities',
-    color: 'emerald',
-    photos: [
-      "Couple with the Mark of Overcomers Int'l Church Members",
-      "Couple with Ocean of Success Int'l Church Members",
-      'Couple with Salvation Ministries Church, GRA, Benin City',
+      'Couple with UNIBEN MASCANS',
     ],
   },
 ]
@@ -150,7 +137,7 @@ export default function PhotographySchedule() {
     <div className="min-h-screen">
       {/* Header */}
       <div className=" border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 py-12 text-center">
+        <div className="max-w-4xl mx-auto px-4 py-12 text-center">
           <div className="flex justify-center mb-4">
             <Camera className="w-12 h-12 " />
           </div>
@@ -175,7 +162,7 @@ export default function PhotographySchedule() {
       </div>
 
       {/* Photo Sections */}
-      <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="space-y-6">
           {photoSections.map((section, sectionIndex) => {
             const isExpanded = expandedSections[sectionIndex] !== false
@@ -217,7 +204,7 @@ export default function PhotographySchedule() {
                         return (
                           <div
                             key={photoIndex}
-                            className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                            className="flex items-center gap-4 p-3 rounded-lg transition-colors group"
                           >
                             <button
                               onClick={() => toggleCheck(itemId)}

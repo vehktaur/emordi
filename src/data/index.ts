@@ -106,18 +106,23 @@ export const programSections: Array<ProgramSection> = [
       },
       {
         num: 2,
-        title: 'Bro Emmanuel Akinkugbe',
+        title: 'Bro Timothy Uangboje - Chairman',
+      },
+      {
+        num: 3,
+        title: 'Bro Emmanuel Akinkugbe - Speaker',
       },
     ],
   },
 
   {
-    title: 'Order of Service',
+    title: 'Order of Events',
     subtitle: 'Join us as we celebrate this special day',
     items: [
       {
         num: 1,
         title: 'Opening Song (131) and Prayer',
+        subtitle: '(Opening prayer by Brother Ezekiel Ebhodaghe)',
         icon: Church,
       },
       {
@@ -139,6 +144,7 @@ export const programSections: Array<ProgramSection> = [
         num: 5,
         title: 'Closing Song (132) and Prayer',
         icon: Church,
+        subtitle: '(Closing prayer by )',
       },
     ],
   },

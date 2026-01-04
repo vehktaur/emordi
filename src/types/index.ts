@@ -22,6 +22,7 @@ export interface ProgramSection {
   items: Array<{
     num: number
     title: string
+    subtitle?: string
     icon?: typeof Heart
   }>
 }

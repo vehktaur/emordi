@@ -52,6 +52,9 @@ export default function WeddingProgram() {
 
                     <div className="flex-1">
                       <h3 className="">{item.title}</h3>
+                      {item.subtitle && (
+                        <p className="text-sm text-rose-100">{item.subtitle}</p>
+                      )}
                     </div>
                     {Icon && (
                       <div className="shrink-0">
@@ -68,7 +71,7 @@ export default function WeddingProgram() {
         {/* Hymns Section */}
         <article className="program-section">
           <header className="text-center w-fit mx-auto clamp-[px,4,10]">
-            <h1 className="heading">Wedding Hymns</h1>
+            <h1 className="heading">Songs</h1>
             <p>Click to view full lyrics</p>
           </header>
 
