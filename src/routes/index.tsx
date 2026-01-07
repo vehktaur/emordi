@@ -2,11 +2,11 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { useEffect, useState } from 'react'
-import { HeartIcon as Heart } from 'lucide-react'
 import images from '@/assets/images'
+import HeartIcon from '@/components/ui/heart-icon'
 
-const { img1, img2, img3, img4 } = images
-const slideImages = [img1, img2, img3, img4]
+const { img1, img2, img3, img4, img5, img6 } = images
+const slideImages = [img1, img2, img3, img4, img5, img6]
 const backgroundImages = [
   '/img/bg1.png',
   '/img/bg2.jpg',
@@ -62,9 +62,9 @@ function Home() {
             backgroundImage: `url(${randomBg})`,
           }}
         />
-        <Heart
-          className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse max-w-[113%] clamp-[size,110,145] text-rose-100"
-          strokeWidth={0.5}
+        <HeartIcon
+          className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse max-w-[113%] clamp-[size,120,160] text-rose-100"
+          strokeWidth={0.35}
         />
         <p className="font-medium clamp-[text,xl,2xl]">
           "Two hearts, one{' '}

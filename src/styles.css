@@ -126,6 +126,9 @@
 @theme {
   --font-montserrat: 'Montserrat', sans-serif;
   --font-great-vibes: 'Great Vibes', cursive;
+
+  /* backgrounds */
+  --background-image-photography: url('/src/assets/images/img6.jpeg');
 }
 
 @layer base {
@@ -141,12 +144,20 @@
 }
 
 @layer components {
+  .page-heading {
+    @apply clamp-[text,2xl,4xl] font-semibold text-center relative;
+  }
+
   .program-section {
     @apply max-w-3xl border rounded-3xl mx-auto flex flex-col w-full clamp-[px,2.5,4] pt-5 clamp-[pb,6,8];
 
     .heading {
       @apply clamp-[text,lg,2xl] mb-2 font-semibold;
     }
+  }
+
+  .footer-note {
+    @apply w-fit mx-auto mt-12 bg-rose-50 rounded-full clamp-[px,4,6] py-2 border border-rose-200 text-foreground;
   }
 }
 

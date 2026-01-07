@@ -17,13 +17,19 @@ export default function WeddingProgram() {
           autoPlay
           muted
           loop
-          src="./videos/vid1.mp4"
-        />
+        >
+          <source
+            src="/videos/vid2.mp4"
+            media="(min-width: 1024px)"
+            type="video/mp4"
+          />
+          <source src="/videos/vid1.mp4" type="video/mp4" />
+        </video>
       </div>
-      <h1 className="mb-20 mt-10 clamp-[text,2xl,4xl] font-semibold text-center relative">
-        <Decor className="absolute left-1/2 -top-[20%] -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
-        <Decor className="absolute left-1/2 top-[150%] rotate-180 -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
+      <h1 className="mb-20 mt-10">
+        <Decor className="absolute left-1/2 -top-[40%] -translate-x-1/2 rotate-180 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
         Wedding Program
+        <Decor className="absolute left-1/2 top-[150%]  -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
       </h1>
 
       <div className="grid gap-6">
@@ -86,7 +92,7 @@ export default function WeddingProgram() {
       </div>
 
       {/* Footer note */}
-      <div className="w-fit mx-auto mt-12 bg-rose-50 rounded-full clamp-[px,4,6] py-2 border border-rose-200 text-foreground">
+      <div className="footer-note">
         <p className="">We look forward to celebrating with you! 💝</p>
       </div>
     </div>

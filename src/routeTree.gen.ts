@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WeddingProgramRouteImport } from './routes/wedding-program'
+import { Route as ReceptionRouteImport } from './routes/reception'
 import { Route as PhotographyScheduleRouteImport } from './routes/photography-schedule'
 import { Route as IndexRouteImport } from './routes/index'
 
 const WeddingProgramRoute = WeddingProgramRouteImport.update({
   id: '/wedding-program',
   path: '/wedding-program',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReceptionRoute = ReceptionRouteImport.update({
+  id: '/reception',
+  path: '/reception',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PhotographyScheduleRoute = PhotographyScheduleRouteImport.update({
@@ -32,30 +38,39 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/photography-schedule': typeof PhotographyScheduleRoute
+  '/reception': typeof ReceptionRoute
   '/wedding-program': typeof WeddingProgramRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/photography-schedule': typeof PhotographyScheduleRoute
+  '/reception': typeof ReceptionRoute
   '/wedding-program': typeof WeddingProgramRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/photography-schedule': typeof PhotographyScheduleRoute
+  '/reception': typeof ReceptionRoute
   '/wedding-program': typeof WeddingProgramRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/photography-schedule' | '/wedding-program'
+  fullPaths: '/' | '/photography-schedule' | '/reception' | '/wedding-program'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/photography-schedule' | '/wedding-program'
-  id: '__root__' | '/' | '/photography-schedule' | '/wedding-program'
+  to: '/' | '/photography-schedule' | '/reception' | '/wedding-program'
+  id:
+    | '__root__'
+    | '/'
+    | '/photography-schedule'
+    | '/reception'
+    | '/wedding-program'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PhotographyScheduleRoute: typeof PhotographyScheduleRoute
+  ReceptionRoute: typeof ReceptionRoute
   WeddingProgramRoute: typeof WeddingProgramRoute
 }
 
@@ -66,6 +81,13 @@ declare module '@tanstack/react-router' {
       path: '/wedding-program'
       fullPath: '/wedding-program'
       preLoaderRoute: typeof WeddingProgramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reception': {
+      id: '/reception'
+      path: '/reception'
+      fullPath: '/reception'
+      preLoaderRoute: typeof ReceptionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/photography-schedule': {
@@ -88,6 +110,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PhotographyScheduleRoute: PhotographyScheduleRoute,
+  ReceptionRoute: ReceptionRoute,
   WeddingProgramRoute: WeddingProgramRoute,
 }
 export const routeTree = rootRouteImport

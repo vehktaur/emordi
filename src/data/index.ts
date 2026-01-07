@@ -1,5 +1,7 @@
-import { Church, Heart, MessageSquare } from 'lucide-react'
+import { Church, MessageSquare } from 'lucide-react'
 import type { Hymn, ProgramSection } from '@/types'
+import HandHeartIcon from '@/components/ui/hand-heart-icon'
+import MessageCircleIcon from '@/components/ui/message-circle-icon'
 
 export const hymns: Array<Hymn> = [
   {
@@ -128,12 +130,12 @@ export const programSections: Array<ProgramSection> = [
       {
         num: 2,
         title: 'Wedding Discourse',
-        icon: MessageSquare,
+        icon: MessageCircleIcon,
       },
       {
         num: 3,
         title: 'Exchange of Vows',
-        icon: Heart,
+        icon: HandHeartIcon,
       },
       {
         num: 4,
@@ -147,5 +149,57 @@ export const programSections: Array<ProgramSection> = [
         subtitle: '(Closing prayer by )',
       },
     ],
+  },
+]
+
+export const receptionProgram = [
+  {
+    number: '1',
+    title: 'Introduction of Chairman',
+    subtitle: 'Recognition of Guests',
+  },
+  {
+    number: '2',
+    title: "Arrival of the Bride and Groom's Parents",
+  },
+  {
+    number: '3',
+    title: 'Arrival of the Bride & Groom',
+  },
+  {
+    number: '4',
+    title: 'Opening Prayer',
+  },
+  {
+    number: '5',
+    title: "Chairman's Opening Address",
+  },
+  {
+    number: '6',
+    title: 'Cutting of the Cake',
+  },
+  {
+    number: '7',
+    title: 'Nuptial Dance',
+  },
+  {
+    number: '8',
+    title: 'Toast to the Bride and Groom',
+  },
+  {
+    number: '9',
+    title: 'Presentation of Gifts',
+  },
+  {
+    number: '10',
+    title: "Chairman's Closing Remark",
+  },
+  {
+    number: '11',
+    title: 'Vote of Thanks by Groom',
+  },
+  {
+    number: '12',
+    title: 'Closing Prayers',
   },
 ]

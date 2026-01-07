@@ -1,4 +1,3 @@
-import { PanelLeftIcon } from 'lucide-react'
 import { Link } from '@tanstack/react-router'
 import { useState } from 'react'
 import {
@@ -8,10 +7,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from './ui/sheet'
+import LayoutSidebarRightIcon from './ui/layout-sidebar-right-icon'
 
 const links = [
   { label: 'Welcome', to: '/' },
   { label: 'Wedding Program', to: '/wedding-program' },
+  { label: 'Reception', to: '/reception' },
   { label: 'Photography Schedule', to: '/photography-schedule' },
   { label: 'Gallery', to: '/gallery' },
   { label: 'RSVP', to: '/rsvp' },
@@ -23,7 +24,7 @@ const Header = () => {
     <header className="px-5 h-20 content-center fixed top-0 end-0 z-50">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger className="ms-auto block cursor-pointer text-white">
-          <PanelLeftIcon className="clamp-[size,5,6]" />
+          <LayoutSidebarRightIcon className="clamp-[size,6,7] rotate-180" />
         </SheetTrigger>
         <SheetContent className="bg-transparent backdrop-blur-md border-rose-200 text-white">
           <SheetHeader className="mt-12">
