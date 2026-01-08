@@ -3,10 +3,10 @@ import InstagramIcon from '@/components/ui/instagram-icon'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/gallery')({
-  component: RouteComponent,
+  component: Gallery,
 })
 
-function RouteComponent() {
+function Gallery() {
   return (
     <div>
       {/* Header */}
