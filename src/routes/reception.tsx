@@ -13,12 +13,12 @@ function Reception() {
         {/* Header */}
         <div className="text-center mb-16 clamp-[pt,8,16]">
           <h1 className="page-heading clamp-[mb,10,16]">
-            Photography Schedule
+            Reception
             <Decor className="absolute left-1/2 top-[150%] -z-1 -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
           </h1>
 
           <p className="text-lg ">
-            Join us as we celebrate this joyous occasion
+            Join us for an evening of celebration, food, and dancing!
           </p>
         </div>
 
