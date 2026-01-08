@@ -64,7 +64,7 @@ function Home() {
           }}
         />
         <HeartIcon
-          className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse max-w-[113%] clamp-[size,120,160] text-rose-100"
+          className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse max-w-[125%] clamp-[size,130,160] text-rose-100"
           strokeWidth={0.35}
         />
         <p className="font-medium clamp-[text,xl,2xl]">
