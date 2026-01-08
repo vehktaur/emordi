@@ -14,10 +14,6 @@ import { Decor } from '@/assets/svgs'
 import images from '@/assets/images'
 import CameraIcon from '@/components/ui/camera-icon'
 
-export const Route = createFileRoute('/photography-schedule')({
-  component: PhotographySchedule,
-})
-
 const photoSections = [
   {
     title: 'Essential Couple Photos',
@@ -259,3 +255,19 @@ export default function PhotographySchedule() {
     </div>
   )
 }
+
+export const Route = createFileRoute('/photography-schedule')({
+  component: PhotographySchedule,
+  head: () => ({
+    meta: [
+      {
+        title: 'Photography Schedule - Emordi & Nnadi',
+      },
+      {
+        name: 'description',
+        content:
+          "Organized photo checklist for capturing all the special moments at Emordi and Nnadi's wedding, including couple, family, and group photos.",
+      },
+    ],
+  }),
+})

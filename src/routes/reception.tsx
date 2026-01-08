@@ -3,10 +3,6 @@ import { receptionProgram } from '@/data'
 import { Decor } from '@/assets/svgs'
 import images from '@/assets/images'
 
-export const Route = createFileRoute('/reception')({
-  component: Reception,
-})
-
 function Reception() {
   return (
     <div className="min-h-screen pb-12 px-4">
@@ -66,3 +62,19 @@ function Reception() {
     </div>
   )
 }
+
+export const Route = createFileRoute('/reception')({
+  component: Reception,
+  head: () => ({
+    meta: [
+      {
+        title: 'Reception Program - Emordi & Nnadi',
+      },
+      {
+        name: 'description',
+        content:
+          'Join us for an evening of celebration, food, and dancing at the wedding reception of Emordi and Nnadi.',
+      },
+    ],
+  }),
+})

@@ -2,10 +2,6 @@ import { Decor } from '@/assets/svgs'
 import InstagramIcon from '@/components/ui/instagram-icon'
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/gallery')({
-  component: Gallery,
-})
-
 function Gallery() {
   return (
     <div>
@@ -22,3 +18,19 @@ function Gallery() {
     </div>
   )
 }
+
+export const Route = createFileRoute('/gallery')({
+  component: Gallery,
+  head: () => ({
+    meta: [
+      {
+        title: 'Photo Gallery - Emordi & Nnadi',
+      },
+      {
+        name: 'description',
+        content:
+          "Browse through beautiful moments captured at Emordi and Nnadi's wedding celebration.",
+      },
+    ],
+  }),
+})

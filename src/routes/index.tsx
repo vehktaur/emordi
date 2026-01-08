@@ -193,6 +193,11 @@ export const Route = createFileRoute('/')({
       {
         title: 'Emordi & Nnadi',
       },
+      {
+        name: 'description',
+        content:
+          'Join us as we celebrate the union of Emordi and Nnadi on January 24th, 2026 in Benin City.',
+      },
     ],
   }),
 })

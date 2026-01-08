@@ -5,10 +5,6 @@ import { hymns, programSections as sections } from '@/data'
 import { Accordion } from '@/components/ui/accordion'
 import images from '@/assets/images'
 
-export const Route = createFileRoute('/wedding-program')({
-  component: WeddingProgram,
-})
-
 export default function WeddingProgram() {
   return (
     <div className="py-12 px-5">
@@ -106,3 +102,19 @@ export default function WeddingProgram() {
     </div>
   )
 }
+
+export const Route = createFileRoute('/wedding-program')({
+  component: WeddingProgram,
+  head: () => ({
+    meta: [
+      {
+        title: 'Wedding Program - Emordi & Nnadi',
+      },
+      {
+        name: 'description',
+        content:
+          'View the complete wedding ceremony program for Emordi and Nnadi, including the order of service, hymns, and special moments.',
+      },
+    ],
+  }),
+})
