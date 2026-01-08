@@ -25,7 +25,7 @@ function Home() {
 
   return (
     <div className="flex items-center flex-col sm:flex-row w-full max-w-dvw dark:bg-white">
-      <section className="h-screen flex flex-col min-w-2xs relative w-full sm:w-1/2 xl:w-[62%] overflow-clip">
+      <section className="h-svh sm:h-screen flex flex-col min-w-2xs relative w-full sm:w-1/2 xl:w-[62%] overflow-clip">
         <div className="absolute bottom-16 inset-x-0 text-center z-2 flex flex-col gap-2 text-white">
           <h1 className="clamp-[text,4xl,6xl] font-bold text-center font-great-vibes tracking-wider">
             Emordi & Nnadi
