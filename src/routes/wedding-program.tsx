@@ -26,10 +26,10 @@ export default function WeddingProgram() {
           <source src="/videos/vid1.mp4" type="video/mp4" />
         </video>
       </div>
-      <h1 className="mb-20 mt-10">
-        <Decor className="absolute left-1/2 -top-[40%] -translate-x-1/2 rotate-180 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
+      <h1 className="page-heading mb-20 mt-10">
+
         Wedding Program
-        <Decor className="absolute left-1/2 top-[150%]  -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
+        <Decor className="absolute left-1/2 top-[150%] -z-1 -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
       </h1>
 
       <div className="grid gap-6">

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Camera, LucideCheck } from 'lucide-react'
+import { LucideCheck } from 'lucide-react'
 import { createFileRoute } from '@tanstack/react-router'
 import { cn } from '@/lib/utils'
 import {
@@ -145,11 +145,11 @@ export default function PhotographySchedule() {
       <div className=" border-b border-gray-500/50 bg-black/10 backdrop-blur-xs pt-12">
         <div className="max-w-4xl mx-auto px-4 py-12 text-center">
           <div className="flex justify-center items-center mb-4">
-            <Camera className="w-12 h-12 " />
+            <CameraIcon className="w-12 h-12 " />
           </div>
           <h1 className="page-heading clamp-[mb,10,16]">
             Photography Schedule
-            <Decor className="absolute left-1/2 top-[150%] -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
+            <Decor className="absolute left-1/2 top-[150%] -z-1 -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
           </h1>
           <p className="text-lg  mb-6">
             Our complete photo checklist for the big day
