@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as WeddingProgramRouteImport } from './routes/wedding-program'
 import { Route as ReceptionRouteImport } from './routes/reception'
 import { Route as PhotographyScheduleRouteImport } from './routes/photography-schedule'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as IndexRouteImport } from './routes/index'
 
 const WeddingProgramRoute = WeddingProgramRouteImport.update({
@@ -29,6 +30,11 @@ const PhotographyScheduleRoute = PhotographyScheduleRouteImport.update({
   path: '/photography-schedule',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,12 +43,14 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/gallery': typeof GalleryRoute
   '/photography-schedule': typeof PhotographyScheduleRoute
   '/reception': typeof ReceptionRoute
   '/wedding-program': typeof WeddingProgramRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/gallery': typeof GalleryRoute
   '/photography-schedule': typeof PhotographyScheduleRoute
   '/reception': typeof ReceptionRoute
   '/wedding-program': typeof WeddingProgramRoute
@@ -50,18 +58,30 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/gallery': typeof GalleryRoute
   '/photography-schedule': typeof PhotographyScheduleRoute
   '/reception': typeof ReceptionRoute
   '/wedding-program': typeof WeddingProgramRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/photography-schedule' | '/reception' | '/wedding-program'
+  fullPaths:
+    | '/'
+    | '/gallery'
+    | '/photography-schedule'
+    | '/reception'
+    | '/wedding-program'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/photography-schedule' | '/reception' | '/wedding-program'
+  to:
+    | '/'
+    | '/gallery'
+    | '/photography-schedule'
+    | '/reception'
+    | '/wedding-program'
   id:
     | '__root__'
     | '/'
+    | '/gallery'
     | '/photography-schedule'
     | '/reception'
     | '/wedding-program'
@@ -69,6 +89,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GalleryRoute: typeof GalleryRoute
   PhotographyScheduleRoute: typeof PhotographyScheduleRoute
   ReceptionRoute: typeof ReceptionRoute
   WeddingProgramRoute: typeof WeddingProgramRoute
@@ -97,6 +118,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PhotographyScheduleRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -109,6 +137,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GalleryRoute: GalleryRoute,
   PhotographyScheduleRoute: PhotographyScheduleRoute,
   ReceptionRoute: ReceptionRoute,
   WeddingProgramRoute: WeddingProgramRoute,

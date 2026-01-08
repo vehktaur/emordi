@@ -28,7 +28,7 @@ const Header = () => {
         </SheetTrigger>
         <SheetContent className="bg-transparent backdrop-blur-md border-rose-200 text-white">
           <SheetHeader className="mt-12">
-            <SheetTitle className="clamp-[text,2xl,4xl] text-white font-bold text-center font-great-vibes tracking-wider">
+            <SheetTitle className="clamp-[text,3xl,4xl] text-white font-bold text-center font-great-vibes tracking-wider">
               Emordi & Nnadi
             </SheetTitle>
           </SheetHeader>

@@ -3,6 +3,7 @@ import { Decor } from '@/assets/svgs'
 import { HymnCard } from '@/components/hymn-card'
 import { hymns, programSections as sections } from '@/data'
 import { Accordion } from '@/components/ui/accordion'
+import images from '@/assets/images'
 
 export const Route = createFileRoute('/wedding-program')({
   component: WeddingProgram,
@@ -26,11 +27,18 @@ export default function WeddingProgram() {
           <source src="/videos/vid1.mp4" type="video/mp4" />
         </video>
       </div>
-      <h1 className="page-heading mb-20 mt-10">
 
-        Wedding Program
-        <Decor className="absolute left-1/2 top-[150%] -z-1 -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
-      </h1>
+      <header className="text-center clamp-[pb,15,18] border-b border-gray-500/20 mb-10">
+        <img
+          src={images.rings}
+          className="clamp-[size,8,12] invert mb-4 mx-auto"
+        />
+
+        <h1 className="page-heading">
+          Wedding Program
+          <Decor className="absolute left-1/2 top-[160%] -z-1 -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
+        </h1>
+      </header>
 
       <div className="grid gap-6">
         {sections.map(({ title, subtitle, items }) => (

@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { LucideCheck } from 'lucide-react'
 import { createFileRoute } from '@tanstack/react-router'
-import { cn } from '@/lib/utils'
+import { cn, getItem, setItem } from '@/lib/utils'
 import {
   Accordion,
   AccordionContent,
@@ -120,7 +120,9 @@ const colorClasses = {
 type SectionColor = keyof typeof colorClasses
 
 export default function PhotographySchedule() {
-  const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>({})
+  const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>(
+    () => getItem('photoChecklist') || {},
+  )
 
   const toggleCheck = (id: string): void => {
     setCheckedItems((prev) => ({
@@ -134,6 +136,10 @@ export default function PhotographySchedule() {
     (_, index) => `section-${index}`,
   )
 
+  useEffect(() => {
+    setItem('photoChecklist', checkedItems)
+  }, [checkedItems])
+
   return (
     <div className="min-h-screen pb-12">
       <img
@@ -142,7 +148,7 @@ export default function PhotographySchedule() {
         alt="Background"
       />
       {/* Header */}
-      <div className="border-b border-gray-500/50 bg-black/10 backdrop-blur-xs clamp-[pt,8,16] clamp-[pb,5,8] text-center px-4">
+      <header className="border-b border-gray-500/50 bg-black/10 backdrop-blur-xs clamp-[pt,8,16] clamp-[pb,5,8] text-center px-4">
         <div className="flex justify-center items-center mb-4">
           <CameraIcon className="clamp-[size,7,11]" />
         </div>
@@ -167,7 +173,7 @@ export default function PhotographySchedule() {
             {Object.values(checkedItems).filter(Boolean).length} Completed
           </span>
         </div>
-      </div>
+      </header>
 
       {/* Photo Sections */}
       <div className="max-w-4xl mx-auto px-4 py-12">
@@ -184,13 +190,13 @@ export default function PhotographySchedule() {
                 key={sectionIndex}
                 value={`section-${sectionIndex}`}
                 className={cn(
-                  'rounded-lg border-2 overflow-hidden',
+                  'rounded-lg border overflow-hidden',
                   colors.border,
                 )}
               >
                 {/* Section Header */}
                 <AccordionTrigger
-                  className={`w-full px-6 py-4 flex items-center justify-between ${colors.btnBg} transition-colors hover:no-underline [&[data-state=open]>svg]:rotate-180 [&_svg]:size-5 [&_svg]:${colors.text}`}
+                  className={`w-full px-6 py-4 flex rounded-none items-center justify-between ${colors.btnBg} transition-colors hover:no-underline [&[data-state=open]>svg]:rotate-180 [&_svg]:size-5 [&_svg]:${colors.text}`}
                 >
                   <div className="flex items-center clamp-[gap,3,5]">
                     <span className={`clamp-[text,base,xl] ${colors.text}`}>
