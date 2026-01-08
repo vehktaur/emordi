@@ -24,7 +24,7 @@ const Header = () => {
     <header className="px-5 h-20 content-center fixed top-0 end-0 z-50">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger className="ms-auto block cursor-pointer text-white">
-          <LayoutSidebarRightIcon className="clamp-[size,6,7] rotate-180" />
+          <LayoutSidebarRightIcon className="size-7 animate-bounce" />
         </SheetTrigger>
         <SheetContent className="bg-transparent backdrop-blur-md border-rose-200 text-white">
           <SheetHeader className="mt-12">

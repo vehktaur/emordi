@@ -1,9 +1,10 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { useEffect, useState } from 'react'
 import images from '@/assets/images'
 import HeartIcon from '@/components/ui/heart-icon'
+import { LucideChevronRight } from 'lucide-react'
 
 const { img1, img2, img3, img4, img5, img6 } = images
 const slideImages = [img1, img2, img3, img4, img5, img6]
@@ -24,7 +25,7 @@ function Home() {
 
   return (
     <div className="flex items-center flex-col sm:flex-row w-full max-w-dvw dark:bg-white">
-      <section className="h-dvh flex flex-col min-w-2xs relative w-full sm:w-1/2 xl:w-[62%] overflow-clip">
+      <section className="h-screen flex flex-col min-w-2xs relative w-full sm:w-1/2 xl:w-[62%] overflow-clip">
         <div className="absolute bottom-16 inset-x-0 text-center z-2 flex flex-col gap-2 text-white">
           <h1 className="clamp-[text,4xl,6xl] font-bold text-center font-great-vibes tracking-wider">
             Emordi & Nnadi
@@ -55,7 +56,7 @@ function Home() {
           ))}
         </Swiper>
       </section>
-      <section className="h-dvh items-center relative clamp-[gap,3,4] w-full text-white sm:w-1/2 xl:w-[38%] flex flex-col overflow-hidden justify-center min-h-dvh">
+      <section className="h-screen items-center relative clamp-[gap,3,4] w-full text-white sm:w-1/2 xl:w-[38%] flex flex-col overflow-hidden justify-center min-h-screen">
         <div
           className="absolute inset-0 -z-1  bg-cover brightness-50"
           style={{
@@ -77,6 +78,13 @@ function Home() {
 
         <p className="text-center clamp-[text,lg,xl]"> Benin City </p>
         <CountDown />
+
+        <Link
+          className="flex items-center gap-4 absolute bottom-36 font-medium hover:after:content-[''] after:absolute after:block after:w-0 after:h-0.5 after:bg-rose-200 after:rounded-full text-rose-100 after:transition-all after:duration-300 hover:after:w-1/2 after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:origin-center cursor-pointer clamp-[text,base,lg]"
+          to="/wedding-program"
+        >
+          View Program <LucideChevronRight className="animate-wiggle size-7" />
+        </Link>
 
         <div className="absolute bottom-4 text-center">
           <h3 className="font-medium">Wedding Location</h3>

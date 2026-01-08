@@ -129,6 +129,17 @@
 
   /* backgrounds */
   --background-image-photography: url('/src/assets/images/img6.jpeg');
+
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: translateX(4px);
+    }
+    50% {
+      transform: translateX(-4px);
+    }
+  }
 }
 
 @layer base {
@@ -137,6 +148,14 @@
   }
   body {
     @apply bg-background text-white clamp-[text,sm,base] font-montserrat scrollbar-thin overflow-x-clip;
+
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
+
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
   }
   button {
     @apply cursor-pointer font-montserrat;
@@ -157,7 +176,7 @@
   }
 
   .footer-note {
-    @apply w-fit mx-auto mt-12 bg-rose-50 rounded-full clamp-[px,4,6] py-2 border border-rose-200 text-foreground;
+    @apply w-fit mx-auto mt-12 bg-rose-50 rounded-full clamp-[px,4,6] py-2 border border-rose-200 text-foreground clamp-[text,xs,sm] text-center;
   }
 }
 

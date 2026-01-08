@@ -142,32 +142,30 @@ export default function PhotographySchedule() {
         alt="Background"
       />
       {/* Header */}
-      <div className=" border-b border-gray-500/50 bg-black/10 backdrop-blur-xs pt-12">
-        <div className="max-w-4xl mx-auto px-4 py-12 text-center">
-          <div className="flex justify-center items-center mb-4">
-            <CameraIcon className="w-12 h-12 " />
-          </div>
-          <h1 className="page-heading clamp-[mb,10,16]">
-            Photography Schedule
-            <Decor className="absolute left-1/2 top-[150%] -z-1 -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
-          </h1>
-          <p className="text-lg  mb-6">
-            Our complete photo checklist for the big day
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-3 text-sm">
-            <span className="border px-4 py-2 rounded-full flex items-center gap-2">
-              <InstagramIcon />
-              {photoSections.reduce(
-                (acc, section) => acc + section.photos.length,
-                0,
-              )}{' '}
-              Total Photos
-            </span>
-            <span className="border px-4 py-2 rounded-full flex items-center gap-2">
-              <LucideCheck className="size-4.5" />
-              {Object.values(checkedItems).filter(Boolean).length} Completed
-            </span>
-          </div>
+      <div className="border-b border-gray-500/50 bg-black/10 backdrop-blur-xs clamp-[pt,8,16] clamp-[pb,5,8] text-center px-4">
+        <div className="flex justify-center items-center mb-4">
+          <CameraIcon className="clamp-[size,7,11]" />
+        </div>
+        <h1 className="page-heading clamp-[mb,10,16]">
+          Photography Schedule
+          <Decor className="absolute left-1/2 top-[150%] -z-1 -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
+        </h1>
+        <p className="clamp-[text,sm,lg] mb-6">
+          Our complete photo checklist for the big day
+        </p>
+        <div className="flex flex-wrap justify-center items-center gap-3 clamp-[text,xs,sm]">
+          <span className="border clamp-[px,2,4] clamp-[py,1,2] rounded-full flex items-center gap-2">
+            <InstagramIcon className="clamp-[size,4,4.5]" />
+            {photoSections.reduce(
+              (acc, section) => acc + section.photos.length,
+              0,
+            )}{' '}
+            Total Photos
+          </span>
+          <span className="border px-4 py-2 rounded-full flex items-center gap-2">
+            <LucideCheck className="clamp-[size,4,4.5]" />
+            {Object.values(checkedItems).filter(Boolean).length} Completed
+          </span>
         </div>
       </div>
 
