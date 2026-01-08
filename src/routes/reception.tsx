@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { receptionProgram } from '@/data'
 import { Decor } from '@/assets/svgs'
+import images from '@/assets/images'
 
 export const Route = createFileRoute('/reception')({
   component: Reception,
@@ -8,10 +9,15 @@ export const Route = createFileRoute('/reception')({
 
 function Reception() {
   return (
-    <div className="min-h-screen py-12 px-4">
+    <div className="min-h-screen pb-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16 clamp-[pt,8,16]">
+        <header className="text-center mb-16 clamp-[pt,8,16]">
+          <img
+            src={images.glasses}
+            className="clamp-[size,8,12] invert mb-4 mx-auto"
+          />
+
           <h1 className="page-heading clamp-[mb,10,16]">
             Reception
             <Decor className="absolute left-1/2 top-[150%] -z-1 -translate-x-1/2 -translate-y-1/2 clamp-[size,60,100] text-rose-100" />
@@ -20,7 +26,7 @@ function Reception() {
           <p className="text-lg ">
             Join us for an evening of celebration, food, and dancing!
           </p>
-        </div>
+        </header>
 
         {/* Program Items */}
         <div className="space-y-6">
